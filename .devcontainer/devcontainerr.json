@@ -1,15 +1,21 @@
 {
-  "name": "Srcbook DevContainer",
-  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:18",
-  "postCreateCommand": "npm install",
-  "customizations": {
-    "vscode": {
-      "extensions": ["dbaeumer.vscode-eslint"]
+  "name": "Srcbook Development",
+  "image": "mcr.microsoft.com/devcontainers/node:20",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
     }
   },
-  "runArgs": ["--init"],
-  "settings": {
-    "terminal.integrated.shell.linux": "/bin/bash"
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "editor.formatOnSave": true,
+        "files.autoSave": "afterDelay"
+      },
+      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+    }
   },
+  "postCreateCommand": "npm install -g srcbook",
   "postStartCommand": "npx srcbook start"
 }
