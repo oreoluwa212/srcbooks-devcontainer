@@ -1,5 +1,15 @@
 {
-  "name": "Srcbook Development",
-  "image": "mcr.microsoft.com/devcontainers/node:20",
-  "postStartCommand": "npx srcbook start"
+  "name": "Devcontainer",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-bookworm",
+
+  "portsAttributes": {
+    "4321": {
+      "label": "Application",
+      "onAutoForward": "openPreview"
+    }
+  },
+
+  // Work around for https://github.com/pnpm/pnpm/issues/7024
+  "postCreateCommand": "echo 'package-import-method=clone-or-copy' >> ~/.npmrc && pnpm install axios",
+  "postAttachCommand": "pnpm --help"
 }
