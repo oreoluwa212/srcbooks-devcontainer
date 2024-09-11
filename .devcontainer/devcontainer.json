@@ -1,16 +1,6 @@
 {
   "name": "Srcbook Development",
   "image": "mcr.microsoft.com/devcontainers/node:20",
-  "customizations": {
-    "vscode": {
-      "settings": {
-        "terminal.integrated.defaultProfile.linux": "bash",
-        "editor.formatOnSave": true,
-        "files.autoSave": "afterDelay"
-      },
-      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
-    }
-  },
   "postCreateCommand": "npm install -g srcbook",
   "postStartCommand": "srcbook start"
 }
