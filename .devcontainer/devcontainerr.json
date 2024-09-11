@@ -1,11 +1,6 @@
 {
   "name": "Srcbook Development",
   "image": "mcr.microsoft.com/devcontainers/node:20",
-  "features": {
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "20"
-    }
-  },
   "customizations": {
     "vscode": {
       "settings": {
@@ -17,5 +12,5 @@
     }
   },
   "postCreateCommand": "npm install -g srcbook",
-  "postStartCommand": "npx srcbook start"
+  "postStartCommand": "srcbook start"
 }
