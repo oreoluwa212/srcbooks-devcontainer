@@ -1,0 +1,15 @@
+{
+  "name": "Srcbook DevContainer",
+  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:18",
+  "postCreateCommand": "npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": ["dbaeumer.vscode-eslint"]
+    }
+  },
+  "runArgs": ["--init"],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "postStartCommand": "npx srcbook start"
+}
