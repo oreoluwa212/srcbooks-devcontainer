@@ -4,7 +4,4 @@
   "postCreateCommand": "npm install -g srcbook",
   "postAttachCommand": "npx srcbook@latest start",
   "forwardPorts": [2150],
-  "mounts": [
-    "source=srcbook-output,target=/workspace/docs,type=bind"  // Bind mount docs directory to local machine
-  ]
 }
