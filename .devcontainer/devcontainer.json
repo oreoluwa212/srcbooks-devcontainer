@@ -1,7 +1,7 @@
 {
   "name": "Srcbook Development",
   "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20",
-  "postCreateCommand": "npm install -g srcbook@0.0.15",
-  "postAttachCommand": "npx srcbook@0.0.15 start",
+  "postCreateCommand": "npm install -g srcbook",
+  "postAttachCommand": "npx srcbook@latest start",
   "forwardPorts": [2150],
 }
